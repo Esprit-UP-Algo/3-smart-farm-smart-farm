@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des Clients</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>10</y>
+      <width>641</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(39, 211, 174);
+background-color: rgb(224, 227, 211);
+
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>18</width>
+      <height>18</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>ajouter</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>631</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(198, 198, 198);</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>80</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>nom de plante</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>160</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(4, 4, 4);
+font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>type de plante</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>120</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(6, 6, 6);
+font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>positon</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_ajouter">
+       <property name="geometry">
+        <rect>
+         <x>160</x>
+         <y>310</y>
+         <width>281</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 14, 14);
+font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>ajouter</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_id">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>90</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>240</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(6, 6, 6);
+font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Durée de croissance</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>200</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(6, 6, 6);
+font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Saison de croissance</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_pos">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>130</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_type">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>170</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_saison">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>200</y>
+         <width>121</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>240</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>afficher</string>
+     </attribute>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>641</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>supprimer</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>10</y>
+        <width>601</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>70</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>taper l'identifiant</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_9">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>140</y>
+         <width>331</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supp">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>240</y>
+         <width>141</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>supprimer</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>691</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
