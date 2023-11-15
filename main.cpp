@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
+#include"login.h"
 #include<QDebug>
 #include<iostream>
 using namespace std;
@@ -10,13 +11,18 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Connection c;
     Plante p;
     qDebug();
+
+    Connection c;
+
+
     bool test=c.createconnect();
+     login l;
      MainWindow w;
+     l.show();
     if(test)
-    {w.show();
+    {
         QMessageBox::information(nullptr, QObject::tr("database is open"),
                     QObject::tr("connection successful.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);

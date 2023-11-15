@@ -1,6 +1,10 @@
 QT       += core gui
 QT       += core gui sql
 QT       +=sql
+QT       += core gui printsupport
+QT       += core gui sql
+QT       += charts
+QT       += widgets
 
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -22,17 +26,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    login.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
     plante.cpp
 
 HEADERS += \
+    login.h \
         mainwindow.h \
     connection.h \
     plante.h
 
 FORMS += \
+        login.ui \
         mainwindow.ui
 
 # Default rules for deployment.

@@ -3,6 +3,7 @@
 #include<QObject>
 #include <iostream>
 using namespace std;
+
 Plante::Plante()
 {
      idp=" ";
@@ -35,6 +36,23 @@ bool Plante::ajouter()
 
     return query.exec();
 }
+
+bool Plante::modifier(QString idp)
+ {
+ QSqlQuery query;
+ query.prepare("UPDATE Plante SET idp=:idp, position=:position , type= :type , saison= :saison, duree= :duree WHERE idp=:idp");
+ query.bindValue(":idp", idp);
+ query.bindValue(":position", position);
+ query.bindValue(":type", type);
+ query.bindValue(":saison", saison);
+ query.bindValue(":duree", duree);
+ query.exec();
+return query.exec();
+ }
+
+
+
+
 QSqlQueryModel* Plante::afficher()
 {
     QSqlQueryModel* model=new  QSqlQueryModel();
@@ -57,3 +75,65 @@ query.prepare("Delete from Plante where idp=:idp");
 query.bindValue(":idp",idp);
 return query.exec();
 }
+
+
+QSqlQueryModel * Plante :: rechercher(QString idp)
+{
+
+
+        QSqlQuery query;
+
+
+        QString queryStr = "SELECT * FROM Plante WHERE 1=1";
+
+
+        if (!idp.isEmpty()) {
+            queryStr += " AND idp = :idp";
+        }
+
+        query.prepare(queryStr);
+
+
+        if (!idp.isEmpty()) {
+            query.bindValue(":idp", idp);
+        }
+
+        query.exec();
+
+        QSqlQueryModel *model = new QSqlQueryModel();
+        model->setQuery(query);
+
+        return model;
+ }
+
+QSqlQueryModel * Plante ::trier(int test)
+{
+
+        QSqlQueryModel *model=new QSqlQueryModel() ;
+        QSqlQuery query ;
+
+        if(test==1)
+        {
+            query.prepare("SELECT *  FROM Plante ORDER BY IDP ASC ") ;
+        }
+        else if(test==2)
+        {
+            query.prepare("SELECT *  FROM Plante ORDER BY POSITION ASC ") ;
+        }
+        else if(test==3)
+        {
+            query.prepare("SELECT *  FROM Plante ORDER BY TYPE ASC ") ;
+        }
+
+        if (query.exec()&&query.next())
+        {
+            model->setQuery(query) ;
+        }
+        return model;
+
+
+}
+
+
+
+

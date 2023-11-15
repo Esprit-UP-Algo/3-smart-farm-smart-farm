@@ -14,10 +14,33 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void exportToPDF();
+    void afficherStatistiques();
+    QWidget *statsWidget;
+
+
+
+       QWidget *mainWidget;
 
 private slots:
     void on_pb_ajouter_clicked();
     void on_pushButton_supp_clicked();
+
+
+    void on_pb_ajouter_2_clicked();
+
+
+
+    void on_rechercher_clicked();
+
+
+    void on_pushButton_clicked();
+
+
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::MainWindow *ui;
