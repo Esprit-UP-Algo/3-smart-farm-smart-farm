@@ -102,22 +102,19 @@ void MainWindow::on_rechercher_clicked()
         Plante plante;
         // Récupérez les critères de recherche depuis votre interface utilisateur
 
-            QString idp= ui->le_rechercher->text();
+            QString idp= ui->le_rechercher_2->text();
 
             // Appelez la fonction de recherche dans la classe Commande
             QSqlQueryModel *result = plante.rechercher(idp);
 
             // Mettez à jour le modèle de données de votre widget d'affichage, par exemple un tableau
-            ui->tableView_2->setModel(result);
+            ui->tableView->setModel(result);
     }
 
 
 
-void MainWindow::on_pushButton_clicked()
-{
-    QSqlQueryModel * sortedModel =p.trier(1);
-    ui->tableView_3->setModel(sortedModel);
-}
+
+
 
 
 
@@ -275,4 +272,18 @@ void MainWindow :: afficherStatistiques()
 void MainWindow::on_pushButton_3_clicked()
 {
         afficherStatistiques();
+}
+
+
+
+void MainWindow::on_radioButton_clicked()
+{
+    QSqlQueryModel * sortedModel =p.trier(1);
+    ui->tableView->setModel(sortedModel);
+}
+
+void MainWindow::on_radioButton_2_clicked()
+{
+    QSqlQueryModel * sortedModel =p.trier(2);
+    ui->tableView->setModel(sortedModel);
 }

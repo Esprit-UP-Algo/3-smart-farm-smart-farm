@@ -1,3 +1,4 @@
+
 QT       += core gui
 QT       += core gui sql
 QT       +=sql
@@ -5,7 +6,7 @@ QT       += core gui printsupport
 QT       += core gui sql
 QT       += charts
 QT       += widgets
-
+QT       +=serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += QTE
@@ -26,6 +27,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    arduino.cpp \
     login.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -33,6 +35,7 @@ SOURCES += \
     plante.cpp
 
 HEADERS += \
+    arduino.h \
     login.h \
         mainwindow.h \
     connection.h \
@@ -41,6 +44,7 @@ HEADERS += \
 FORMS += \
         login.ui \
         mainwindow.ui
+DEFINES += ARDUINO_AVR_UNO
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

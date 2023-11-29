@@ -1,4 +1,4 @@
-#include "plante.h"
+ #include "plante.h"
 #include<QString>
 #include<QObject>
 #include <iostream>
@@ -133,6 +133,8 @@ QSqlQueryModel * Plante ::trier(int test)
 
 
 }
+
+
 
 
 

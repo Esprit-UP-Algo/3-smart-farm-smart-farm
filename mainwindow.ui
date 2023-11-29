@@ -17,8 +17,8 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>20</y>
+      <x>20</x>
+      <y>0</y>
       <width>711</width>
       <height>451</height>
      </rect>
@@ -36,7 +36,7 @@ background-color: rgb(224, 227, 211);
 </string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="iconSize">
      <size>
@@ -45,10 +45,6 @@ background-color: rgb(224, 227, 211);
      </size>
     </property>
     <widget class="QWidget" name="tab">
-     <attribute name="icon">
-      <iconset>
-       <normaloff>../../Pictures/Saved Pictures/ab.jpg</normaloff>../../Pictures/Saved Pictures/ab.jpg</iconset>
-     </attribute>
      <attribute name="title">
       <string>ajouter</string>
      </attribute>
@@ -264,79 +260,6 @@ font: 75 18pt &quot;MS Shell Dlg 2&quot;;</string>
          <normaloff>../image-removebg-preview (4).png</normaloff>../image-removebg-preview (4).png</iconset>
        </property>
       </widget>
-      <widget class="QLineEdit" name="le_rechercher">
-       <property name="geometry">
-        <rect>
-         <x>370</x>
-         <y>20</y>
-         <width>171</width>
-         <height>20</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="rechercher">
-       <property name="geometry">
-        <rect>
-         <x>560</x>
-         <y>20</y>
-         <width>41</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-background-color: rgb(255, 213, 44);color :rgb(255, 255, 255);
-border-radius: 70px;
-}</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../image-removebg-preview.png</normaloff>../image-removebg-preview.png</iconset>
-       </property>
-      </widget>
-      <widget class="QTableView" name="tableView_2">
-       <property name="geometry">
-        <rect>
-         <x>370</x>
-         <y>60</y>
-         <width>241</width>
-         <height>131</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QTableView" name="tableView_3">
-       <property name="geometry">
-        <rect>
-         <x>370</x>
-         <y>230</y>
-         <width>251</width>
-         <height>151</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>230</y>
-         <width>31</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="icon">
-        <iconset>
-         <normaloff>../image-removebg-preview (5).png</normaloff>../image-removebg-preview (5).png</iconset>
-       </property>
-      </widget>
       <widget class="QPushButton" name="pushButton_2">
        <property name="geometry">
         <rect>
@@ -380,11 +303,73 @@ border-radius: 70px;
      <widget class="QTableView" name="tableView">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>240</x>
         <y>0</y>
-        <width>681</width>
-        <height>411</height>
+        <width>461</width>
+        <height>401</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_rechercher_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rechercher">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>30</y>
+        <width>41</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+background-color: rgb(255, 213, 44);color :rgb(255, 255, 255);
+border-radius: 70px;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../image-removebg-preview.png</normaloff>../image-removebg-preview.png</iconset>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>83</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>tri id</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>83</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>tri pos</string>
       </property>
      </widget>
     </widget>

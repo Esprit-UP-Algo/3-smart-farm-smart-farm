@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 
 
     bool test=c.createconnect();
+    MainWindow w;
      login l;
-     MainWindow w;
      l.show();
     if(test)
     {
@@ -33,7 +33,6 @@ int main(int argc, char *argv[])
                     QObject::tr("connection failed.\n"
                                 "Click Cancel to exit."), QMessageBox::Cancel);
 
-
-
+    //l.authentification();
     return a.exec();
 }
