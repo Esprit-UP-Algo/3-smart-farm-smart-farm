@@ -1,6 +1,6 @@
 #include "supp.h"
 #include "ui_supp.h"
-#include "mainwindow.h"
+#include "GestionMateriels.h"
 #include "materiels.h"
 #include <QMessageBox>
 supp::supp(QWidget *parent) :

@@ -23,9 +23,9 @@ void Materiels::setage(int age){this->age=age;}
 bool Materiels::ajouter()
 {
     QSqlQuery query;
-    QString res=QString:: number(id);
-    QString ag=QString:: number(age);
-    query.prepare("insert into materiels (nom,id,age)" "values(:nom, :id, :age)");
+    QString res=QString::number(id);
+    QString ag=QString::number(age);
+    query.prepare("insert into Materiels (nom,id,age)" "values(:nom, :id, :age)");
     query.bindValue(":nom",nom);
     query.bindValue(":id",res);
     query.bindValue(":age",ag);
@@ -35,8 +35,8 @@ QSqlQueryModel * Materiels::afficher()
 {
     QSqlQueryModel *model =new QSqlQueryModel();
     model->setQuery("Select * from Materiels");
-    model->setHeaderData(0,Qt::Horizontal, QObject ::tr("ID"));
-    model->setHeaderData(1,Qt::Horizontal, QObject ::tr("nom"));
+     model->setHeaderData(0,Qt::Horizontal, QObject ::tr("nom"));
+    model->setHeaderData(1,Qt::Horizontal, QObject ::tr("ID"));
     model->setHeaderData(2,Qt::Horizontal, QObject ::tr("age"));
     return model;
 }
@@ -48,4 +48,30 @@ bool Materiels::supprimer (int id)
     query.bindValue(":id",res);
     return query.exec();
 }
+bool Materiels::modifier(int id)
+{
+    QSqlQuery query;
+    QString res=QString::number(id);
+    QString a=QString::number(age);
+    query.prepare("update Materiels set nom=:nom, age=:ag where ID=:res");
+    query.bindValue(":nom",nom);
+    query.bindValue(":ag",a);
+    query.bindValue(":res",res);
+    return query.exec();
+}
+QSqlQueryModel * Materiels::trier()
+{
+    QSqlQueryModel *model =new QSqlQueryModel();
+    model->setQuery("Select * from Materiels order by ID ");
+     model->setHeaderData(0,Qt::Horizontal, QObject ::tr("nom"));
+    model->setHeaderData(1,Qt::Horizontal, QObject ::tr("ID"));
+    model->setHeaderData(2,Qt::Horizontal, QObject ::tr("age"));
+    return model;
+}
 
+QSqlQueryModel * Materiels:: recherche(QString id)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+    model->setQuery("SELECT * FROM MATERIELS WHERE idp LIKE '"+id+"'  ");
+    return model;
+}

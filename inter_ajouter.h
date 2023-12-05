@@ -1,4 +1,4 @@
-#ifndef INTER_AJOUTER_H
+ #ifndef INTER_AJOUTER_H
 #define INTER_AJOUTER_H
 
 #include <QDialog>

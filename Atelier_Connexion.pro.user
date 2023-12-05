@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2023-10-30T00:02:02. -->
+<!-- Written by QtCreator 4.11.0, 2023-12-04T09:35:07. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -287,8 +287,8 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/atelier/Atelier_Connexion/Atelier_Connexion/Atelier_Connexion.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/atelier/Atelier_Connexion/Atelier_Connexion/Atelier_Connexion.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/3-smartfarm/3-smart-farm-smart-farm-gestionmatriel/Atelier_Connexion.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/3-smartfarm/3-smart-farm-smart-farm-gestionmatriel/Atelier_Connexion.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

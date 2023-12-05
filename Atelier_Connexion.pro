@@ -7,7 +7,10 @@
 QT       += core gui sql \
     quick
 Qt       +=sql
-
+QT       += core gui printsupport
+QT       += core gui sql
+QT       += charts
+QT       += widgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Atelier_Connexion
@@ -28,22 +31,30 @@ CONFIG += c++11
 
 SOURCES += \
     inter_ajouter.cpp \
+    lesgestions.cpp \
         main.cpp \
-        mainwindow.cpp \
+        GestionMateriels.cpp \
     connection.cpp \
     materiels.cpp \
-    supp.cpp
+    modifier.cpp \
+    supp.cpp \
+    utilisateur.cpp
 
 HEADERS += \
     inter_ajouter.h \
-        mainwindow.h \
+        GestionMateriels.h \
     connection.h \
+    lesgestions.h \
     materiels.h \
-    supp.h
+    modifier.h \
+    supp.h \
+    utilisateur.h
 
 FORMS += \
         inter_ajouter.ui \
-        mainwindow.ui \
+        GestionMateriels.ui \
+        lesgestions.ui \
+        modifier.ui \
         supp.ui
 
 # Default rules for deployment.

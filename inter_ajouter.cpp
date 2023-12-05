@@ -7,15 +7,17 @@ inter_ajouter::inter_ajouter(QWidget *parent) :
     ui(new Ui::inter_ajouter)
 {
     ui->setupUi(this);
-
+    /*
+    ui->lineEdit->setValidator(new QIntValidator(0,9999999,this));
+    ui->lineEdit_3->setValidator(new QIntValidator(0,9999999,this));
+    ui->lineEdit_2->setMaxLength(8);*/
+    //ui->lineEdit_2->setValidator(new QRegExpValidator("^[A-Za-z_]{1,8}$,this"));
 }
 
 inter_ajouter::~inter_ajouter()
 {
     delete ui;
 }
-
-
 
 
 void inter_ajouter::on_confirm_button_clicked()

@@ -17,6 +17,9 @@ public:
     bool ajouter();
     QSqlQueryModel * afficher();
     bool supprimer (int);
+    bool modifier(int);
+    QSqlQueryModel * trier();
+    QSqlQueryModel *recherche(QString);
 
 private:
     QString nom;
