@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>GestionRecolte</class>
+ <widget class="QMainWindow" name="GestionRecolte">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -18,13 +18,13 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
-      <width>731</width>
-      <height>571</height>
+      <y>40</y>
+      <width>931</width>
+      <height>551</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -312,20 +312,7 @@
          <string>excel</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="Ajouter_2">
-        <property name="geometry">
-         <rect>
-          <x>140</x>
-          <y>390</y>
-          <width>161</width>
-          <height>41</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Ajouter</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="abcd">
+       <widget class="QLabel" name="abcdec">
         <property name="geometry">
          <rect>
           <x>340</x>
@@ -351,14 +338,32 @@ color: rgb(0, 85, 0);</string>
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="abcde">
+       <widget class="QLabel" name="label_5">
         <property name="geometry">
          <rect>
-          <x>340</x>
-          <y>300</y>
-          <width>341</width>
-          <height>25</height>
+          <x>20</x>
+          <y>400</y>
+          <width>291</width>
+          <height>41</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Algerian</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(255, 255, 255)</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#aa0000;&quot;&gt;emplacement libre&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
         </property>
        </widget>
       </widget>
@@ -428,59 +433,59 @@ color: rgb(0, 85, 0);</string>
          </rect>
         </property>
        </widget>
+       <widget class="QGroupBox" name="groupBox_7">
+        <property name="geometry">
+         <rect>
+          <x>750</x>
+          <y>150</y>
+          <width>171</width>
+          <height>141</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Algerian</family>
+          <pointsize>16</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(134, 159, 142);</string>
+        </property>
+        <property name="title">
+         <string>TRIER</string>
+        </property>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>40</y>
+           <width>191</width>
+           <height>18</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>id</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>90</y>
+           <width>141</width>
+           <height>18</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>nom pr</string>
+         </property>
+        </widget>
+       </widget>
       </widget>
      </widget>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_7">
-    <property name="geometry">
-     <rect>
-      <x>760</x>
-      <y>230</y>
-      <width>171</width>
-      <height>141</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Algerian</family>
-      <pointsize>16</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(134, 159, 142);</string>
-    </property>
-    <property name="title">
-     <string>TRIER</string>
-    </property>
-    <widget class="QRadioButton" name="radioButton_2">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>40</y>
-       <width>191</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>id</string>
-     </property>
-    </widget>
-    <widget class="QRadioButton" name="radioButton">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>90</y>
-       <width>141</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>nom produit</string>
-     </property>
     </widget>
    </widget>
   </widget>

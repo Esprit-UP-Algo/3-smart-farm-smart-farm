@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "GestionRecolte.h"
+#include "ui_GestionRecolte.h"
 #include "invites.h"
 #include <QMessageBox>
 #include <QDebug>
@@ -30,46 +30,47 @@
 #include <QTextStreamManipulator>
 #include <QFile>
 #include <invites.h>
+#include <arduino.h>
 
 
 
+#include <QMainWindow>
 QT_CHARTS_USE_NAMESPACE
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
+GestionRecolte::GestionRecolte(QWidget *parent) : QMainWindow(parent), ui(new Ui::GestionRecolte)
 {
     ui->setupUi(this);
-}
+
 
 
     // Your initialization code...
-/*
+
     arduino = new Arduino(this);
 
     // Connect to Arduino (change portName as needed)
     if (arduino->connectToArduino("COM4")) {
-        connect(arduino, &Arduino::distanceChanged, this, &MainWindow::handleDistanceChanged);
+        connect(arduino, &Arduino::distanceChanged, this, &GestionRecolte::handleDistanceChanged);
 
-
-
-    }
 }
 
-*
-*
-*/
-/*
-void MainWindow::handleDistanceChanged(int distance)
+    }
+
+
+
+
+void GestionRecolte::handleDistanceChanged(int distance)
 {
-    // Do something with the distance received from Arduino
-    ui->abcd->setText("Distance: " + QString::number(distance) + " cm");
-    ui->abcde->setText( QString::number(distance) );
-}*/
-MainWindow::~MainWindow()
+    qDebug() << "Distance changed: " << distance;
+       // Do something with the distance received from Arduino
+       ui->abcdec->setText("Distance: " + QString::number(distance) + " cm");
+
+}
+GestionRecolte::~GestionRecolte()
 {
     // Destructor implementation
 
 }
-void MainWindow::on_Ajouter_clicked()
+void GestionRecolte::on_Ajouter_clicked()
 {
     QString NOM_PRODUIT = ui->NOM_PRODUIT->text();
     int ID = ui->CIN->text().toInt();  // Modifier la variable
@@ -90,7 +91,7 @@ void MainWindow::on_Ajouter_clicked()
     }
 }
 
-void MainWindow::on_Supprimer_clicked()
+void GestionRecolte::on_Supprimer_clicked()
 {
     invites i1;
     i1.setID(ui->CIN->text().toInt());  // Modifier la variable
@@ -107,7 +108,7 @@ void MainWindow::on_Supprimer_clicked()
     }
 }
 
-void MainWindow::on_Modifier_clicked()
+void GestionRecolte::on_Modifier_clicked()
 {
     invites i3;
     QString NOM_PRODUIT = ui->NOM_PRODUIT->text();
@@ -131,7 +132,7 @@ void MainWindow::on_Modifier_clicked()
 
 
 
-void MainWindow::on_radioButton_2_toggled(bool checked)
+void GestionRecolte::on_radioButton_2_toggled(bool checked)
 {
     if (checked == true){
                        ui->table->setModel(i.trierParCIN());
@@ -140,7 +141,7 @@ void MainWindow::on_radioButton_2_toggled(bool checked)
                    }
 }
 
-void MainWindow::on_radioButton_toggled(bool checked)
+void GestionRecolte::on_radioButton_toggled(bool checked)
 {
     if (checked == true){
                        ui->table->setModel(i.trierParNOM_PRODUIT());
@@ -150,7 +151,7 @@ void MainWindow::on_radioButton_toggled(bool checked)
 }
 
 
-void MainWindow::exportToPDF()
+void GestionRecolte::exportToPDF()
 {
     QString filePath = QFileDialog::getSaveFileName(nullptr, "Exporter en PDF", "", "Fichiers PDF (*.pdf)");
 
@@ -228,13 +229,13 @@ void MainWindow::exportToPDF()
 
 
 
-void MainWindow::on_pushButton_clicked()
+void GestionRecolte::on_pushButton_clicked()
 {
     exportToPDF();
 }
 
 
-void MainWindow :: afficherStatistiques()
+void GestionRecolte :: afficherStatistiques()
 {
     QBarSeries *series = new QBarSeries();
 
@@ -296,11 +297,11 @@ void MainWindow :: afficherStatistiques()
     statsWindow->show();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void GestionRecolte::on_pushButton_2_clicked()
 {
      afficherStatistiques();
 }
-void MainWindow::on_aziz_clicked()
+void GestionRecolte::on_aziz_clicked()
 
 {
 
@@ -328,7 +329,9 @@ void MainWindow::on_aziz_clicked()
 
 
 
-void MainWindow::on_pushButton_3_clicked()
+
+
+void GestionRecolte::on_pushButton_3_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName((QWidget*)0, "Export CSV", QString(), "*.csv");
     if (QFileInfo(fileName).suffix().isEmpty()) { fileName.append(".csv"); }
@@ -368,7 +371,7 @@ void MainWindow::on_pushButton_3_clicked()
 
 
 
-void MainWindow::on_abc_linkActivated(const QString &link)
+void GestionRecolte::on_abc_linkActivated(const QString &link)
 {
 
 }
