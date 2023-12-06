@@ -4,9 +4,13 @@
 #
 #-------------------------------------------------
 
+QT       += core gui sql \
+    quick
+Qt       +=sql
+QT       += core gui printsupport
 QT       += core gui sql
-QT+=sql
-
+QT       += charts
+QT       += widgets
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Atelier_Connexion
@@ -26,16 +30,61 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    GestionAnimaux.cpp \
+    GestionEmploye.cpp \
+    GestionPlante.cpp \
+    ajouter.cpp \
+    animaux.cpp \
+    cal.cpp \
+    employe.cpp \
+    inter_ajouter.cpp \
+    lesgestions.cpp \
         main.cpp \
-        mainwindow.cpp \
-    connection.cpp
+        GestionMateriels.cpp \
+    connection.cpp \
+    materiels.cpp \
+    modifier.cpp \
+    modifieran.cpp \
+    plante.cpp \
+    supp.cpp \
+    supprimeran.cpp \
+    utilisateur.cpp
 
 HEADERS += \
-        mainwindow.h \
-    connection.h
+    GestionAnimaux.h \
+    GestionEmploye.h \
+    GestionPlante.h \
+    ajouter.h \
+    animaux.h \
+    cal.h \
+    employe.h \
+    inter_ajouter.h \
+        GestionMateriels.h \
+    connection.h \
+    lesgestions.h \
+    materiels.h \
+    modifier.h \
+    modifieran.h \
+    plante.h \
+    supp.h \
+    supprimeran.h \
+    ui_mainwindow.h \
+    utilisateur.h
 
 FORMS += \
-        mainwindow.ui
+        GestionAnimaux.ui \
+        GestionEmploye.ui \
+        GestionPlante.ui \
+        afficher.ui \
+        ajouter.ui \
+        cal.ui \
+        inter_ajouter.ui \
+        GestionMateriels.ui \
+        lesgestions.ui \
+        modifier.ui \
+        modifieran.ui \
+        supp.ui \
+        supprimeran.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GestionAnimaux</class>
+ <widget class="QMainWindow" name="GestionAnimaux">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>795</width>
+    <height>436</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des Clients</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>751</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>30</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 italic 15pt &quot;Perpetua&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Gestion des Animaux</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Ajouter">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>81</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ajouter </string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="supprimeran">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>80</y>
+       <width>81</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Supprimer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="modifieran">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>130</y>
+       <width>91</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Modifier</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="affichean">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>130</y>
+       <width>81</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Afficher</string>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tablevie">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>491</width>
+       <height>251</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Trieran">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>180</y>
+       <width>91</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Trier</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pdfa">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>180</y>
+       <width>81</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PDF</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="statanim">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>230</y>
+       <width>91</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Statistique</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineditrech">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>20</y>
+       <width>113</width>
+       <height>44</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="recherchean">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>20</y>
+       <width>80</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Recherche</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="calendrierb">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>230</y>
+       <width>81</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#calendrierb {
+    background-color: #000000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}</string>
+     </property>
+     <property name="text">
+      <string>Calenderier</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="unarchiveButton">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>280</y>
+       <width>81</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#unarchiveButton{
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}</string>
+     </property>
+     <property name="text">
+      <string>Désarchiver</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="archiveButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>280</y>
+       <width>91</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#archiveButton {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}</string>
+     </property>
+     <property name="text">
+      <string>Archiver</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>-370</x>
+      <y>0</y>
+      <width>441</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../Downloads/logofinal.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>795</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

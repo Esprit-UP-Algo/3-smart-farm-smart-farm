@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cal</class>
+ <widget class="QDialog" name="cal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>749</width>
+    <height>535</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>50</y>
+     <width>721</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QPushButton" name="confirmerc">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>80</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+/* Styliser le bouton Recherche */
+QPushButton#confirmerc {
+    background-color: #008000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+
+
+
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Confirmer</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditc">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>113</width>
+      <height>44</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>461</width>
+      <height>311</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

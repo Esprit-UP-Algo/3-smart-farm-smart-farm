@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ajouter</class>
+ <widget class="QDialog" name="ajouter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>321</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+   </property>
+   <property name="title">
+    <string>GroupBox</string>
+   </property>
+   <widget class="QLineEdit" name="lineEdit_id">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>50</y>
+      <width>113</width>
+      <height>44</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_racea">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>90</y>
+      <width>113</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_sexe">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>130</y>
+      <width>113</width>
+      <height>44</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>47</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>id</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>90</y>
+      <width>47</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>race</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>140</y>
+      <width>47</width>
+      <height>14</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>sexe</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="confirmer">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>240</y>
+     <width>75</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>confirmer</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
