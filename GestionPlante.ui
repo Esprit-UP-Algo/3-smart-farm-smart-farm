@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>770</width>
+    <height>664</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des Clients</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>711</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>18</width>
+      <height>18</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>ajouter</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>711</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+
+/* Styliser tous les boutons */
+QPushButton {
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Ombre */
+    font-family: Arial, sans-serif; /* Changer la police */
+    font-size: 14px; /* Taille de la police */
+    padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+}
+
+/* Styliser le bouton Ajouter */
+QPushButton#Ajouter {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Supprimer */
+QPushButton#supprimeran {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Modifier */
+QPushButton#modifieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Afficher */
+QPushButton#affichean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Trier */
+QPushButton#Trieran {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton PDF */
+QPushButton#pdfa {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Statistique */
+QPushButton#statanim {
+    background-color: #008000; /* Vert */
+    color: #FFFFFF; /* Blanc */
+}
+
+/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QTableView {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>151</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>nom de plante</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>250</y>
+         <width>161</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>type de plante</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>100</y>
+         <width>91</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>positon</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_ajouter">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>20</y>
+         <width>176</width>
+         <height>46</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pb_ajouter{
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pb_ajouter:pressed {
+	background-color: rgb(241, 241, 241);
+    border-style: inset;
+color: rgb(255, 255, 255);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../image-removebg-preview (3).png</normaloff>../image-removebg-preview (3).png</iconset>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_id">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>20</y>
+         <width>121</width>
+         <height>44</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>340</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Durée de croissance</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>201</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Saison de croissance</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_pos">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>90</y>
+         <width>121</width>
+         <height>44</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_type">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>240</y>
+         <width>121</width>
+         <height>44</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="le_saison">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>160</y>
+         <width>121</width>
+         <height>44</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>320</y>
+         <width>113</width>
+         <height>44</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit{
+background-color: rgb(255, 255, 255);}</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pb_ajouter_2">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>80</y>
+         <width>176</width>
+         <height>46</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pb_ajouter_2{
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pb_ajouter_2:pressed {
+	background-color: rgb(241, 241, 241);
+    border-style: inset;
+color: rgb(255, 255, 255);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../image-removebg-preview (4).png</normaloff>../image-removebg-preview (4).png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>140</y>
+         <width>176</width>
+         <height>46</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_2{
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_2:pressed {
+	background-color: rgb(241, 241, 241);
+    border-style: inset;
+color: rgb(255, 255, 255);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../image-removebg-preview (7).png</normaloff>../image-removebg-preview (7).png</iconset>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>210</y>
+         <width>176</width>
+         <height>46</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_3{
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_3:pressed {
+	background-color: rgb(241, 241, 241);
+    border-style: inset;
+color: rgb(255, 255, 255);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../image-removebg-preview (6).png</normaloff>../image-removebg-preview (6).png</iconset>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>afficher</string>
+     </attribute>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>0</y>
+        <width>461</width>
+        <height>401</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_rechercher_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>30</y>
+        <width>171</width>
+        <height>44</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rechercher">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#rechercher {background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+}
+QPushButton#rechercher:pressed {
+	background-color: rgb(0, 136, 0);
+    border-style: inset;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../image-removebg-preview.png</normaloff>../image-removebg-preview.png</iconset>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>83</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>tri id</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>130</y>
+        <width>83</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>tri pos</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>supprimer</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>691</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>30</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(7, 7, 7);
+font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>taper l'identifiant</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_9">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>100</y>
+         <width>331</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_supp">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>240</y>
+         <width>176</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_supp{
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_supp:pressed {
+	background-color: rgb(241, 241, 241);
+    border-style: inset;
+color: rgb(255, 255, 255);
+}</string>
+       </property>
+       <property name="text">
+        <string>supprimer</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>770</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

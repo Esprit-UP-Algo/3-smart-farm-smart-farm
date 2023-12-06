@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GestionMateriels</class>
+ <widget class="QMainWindow" name="GestionMateriels">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1084</width>
+    <height>586</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des Clients</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>1031</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#pushButton{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}
+
+QPushButton#pushButton_2{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_2:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_3{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_3:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_pdf{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_pdf:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_stat{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_stat:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_sup{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_sup:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_4{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_4:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}
+/* Styliser QTableView */
+QGroupBox {
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>281</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../projet c++/logoofinal.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QTableView" name="tableView">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>150</y>
+       <width>511</width>
+       <height>241</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>300</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>afficher</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_sup">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>260</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>supprimer</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>170</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>trier</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>220</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>modifier</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../projet c++/modifier_faza.png</normaloff>../../projet c++/modifier_faza.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>130</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>ajouter</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../projet c++/ajouter_faza.png</normaloff>../../projet c++/ajouter_faza.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_pdf">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>350</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>PDF</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_stat">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>390</y>
+       <width>156</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Statistiques</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="searchButton">
+     <property name="geometry">
+      <rect>
+       <x>830</x>
+       <y>10</y>
+       <width>156</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#searchButton{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#searchButton:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>chercher</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../projet c++/search_faza.png</normaloff>../../projet c++/search_faza.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="search_lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>10</y>
+       <width>161</width>
+       <height>44</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1084</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

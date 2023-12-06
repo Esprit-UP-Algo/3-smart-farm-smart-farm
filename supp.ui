@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>supp</class>
+ <widget class="QDialog" name="supp">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>668</width>
+    <height>492</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_sp">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>330</y>
+     <width>156</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButton_sp{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_sp:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>supprimer</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_ids">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>260</y>
+     <width>113</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>230</y>
+     <width>361</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>donner l'id pour la suppression:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>380</y>
+     <width>156</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton#pushButton_2{
+    
+	background-color: rgb(0, 136, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 12px;
+    min-width: 10em;
+    padding: 6px;
+	color: rgb(255, 255, 255);
+}
+QPushButton#pushButton_2:pressed {
+    background-color: rgb(239, 239, 239);
+    border-style: inset;
+	color: rgb(255, 255, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>annuler</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

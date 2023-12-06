@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>afficher</class>
+ <widget class="QDialog" name="afficher">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>605</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Styliser le bouton Recherche */
+QPushButton#recherchean {
+    background-color: #000000; /* Noir */
+    color: #FFFFFF; /* Blanc */
+}
+/* Styliser QTableView */
+QGroupBox
+{
+    border: 1px solid #000; /* Bordure noire */
+    color: #000; /* Texte noir */
+    background-color: #808080; /* Fond gris */
+    gridline-color: #008000; /* Lignes de grille vertes */
+}
+
+/* Styliser l'en-tête de QTableView */
+QHeaderView::section {
+    background-color: #008000; /* Fond vert */
+    padding: 5px; /* Espacement interne */
+    border: 1px solid #000; /* Bordure noire */
+    color: #fff; /* Texte blanc */
+}
+
+/* Styliser les cellules de QTableView lorsqu'elles sont sélectionnées */
+QTableView::item:selected {
+    background-color: #008000; /* Fond vert */
+    color: #fff; /* Texte blanc */
+}
+/* Styliser QLineEdit */
+QLineEdit {
+    border: 2px solid #008000; /* Bordure verte */
+    border-radius: 10px; /* Bordures arrondies */
+      padding: 5px; /* Espacement interne réduit */
+    min-height: 30px; /* Hauteur minimale augmentée */
+    background-color: #808080; /* Fond gris */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Styliser QLineEdit lorsqu'il a le focus */
+QLineEdit:focus {
+    border: 2px solid #000000; /* Bordure noire */
+}
+/* CSS pour styliser votre interface */
+* {
+    /* Couleur de fond générale */
+    background-color: #808080; /* Gris */
+}
+</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>30</y>
+     <width>341</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
